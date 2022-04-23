@@ -1,38 +1,99 @@
-.App {
+.title {
   text-align: center;
+  color: darkblue;
+  font-family: fantasy;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainFlex{
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftFlex{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 60%;
+  padding: 10px 35px;
+}
+
+.rightFlex{
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  background-size: contain;
+  padding: 10px 35px;
+}
+
+.colFlex{
+  display: flex;
+  flex-direction: column;
+}
+
+.rowFlex{
+  display: flex;
+  padding: 25px 30px;
+}
+
+.img{
+  border-radius: 20px;
+}
+
+.line{
+  height: 1px;
+  background-color: darkgrey;
+  border: none;
+}
+
+.leftMargin{
+  margin-left: 35px;
+}
+
+.commentFlex{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 25px;
+}
+
+.commentSectionDetails{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  border: 1px ridge lightgrey;
+  padding: 10px;
+}
+
+.commentSectionContent{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.commentSectionBorder{
+  border: 1px ridge lightgrey;
+  padding: 10px;
+}
+
+.commentWidth{
+  width: 35%;
+}
+
+.btn{
+  width: 25%;
   color: white;
+  font-weight: bold;
+  background-color: coral;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.italicFont{
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.largeFont{
+  font-size: 25px;
 }
+
+input:focus {background-color: lightgrey}
+textarea:focus {background-color: lightgrey}
