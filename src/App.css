@@ -29,3 +29,19 @@ ul{
   color:#0aff0a;
   text-decoration: underline!important;
 }
+
+.posts{
+  padding: 25px 50px;
+}
+
+.posts a {
+  font-size: 22px;
+}
+
+.post {
+  padding: 15px 100px;
+}
+
+.post p {
+  font-size: 22px;
+}
