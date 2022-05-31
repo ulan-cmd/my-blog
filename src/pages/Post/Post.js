@@ -1,6 +1,11 @@
 import React from "react";
 
 const Post = () => {
+
+    const changeValue = (event) => {
+        console.log(event.target.value);
+    }
+
     return (
         <div className="w3-col l12 s12">
             <div className="w3-card-4 w3-margin w3-white">
@@ -16,8 +21,8 @@ const Post = () => {
                 <hr className="line"/>
                 <h4 className="leftMargin">Оставить комментарий*</h4>
                 <div className="commentFlex">
-                    <input className="input:focus commentWidth" type="text" placeholder="Введите ваше имя"/>
-                    <textarea className="textarea:focus commentWidth" placeholder="Внесите комментарий"/>
+                    <input onChange={changeValue} className="input:focus commentWidth" type="text" placeholder="Введите ваше имя"/>
+                    <textarea onChange={changeValue} className="textarea:focus commentWidth" placeholder="Внесите комментарий"/>
                     <button className="btn">Отправить</button>
                 </div>
                 <hr className="line"/>
