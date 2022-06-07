@@ -1,0 +1,35 @@
+.card {
+    width: 450px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDE8DC;
+}
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #0C2340;
+    margin-bottom: 20px;
+}
+.card_img {
+    width: 400px;
+    margin-bottom: 20px;
+}
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.card_button {
+    padding: 17px;
+    width: 350px;
+    background-color: #0C2340;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
