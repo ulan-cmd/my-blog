@@ -4,7 +4,18 @@ import styles from './Product.module.css';
 const Product = (props) => {
 
     const addCart = () => {
-        localStorage.setItem('cart', JSON.stringify(props));
+        let productsFromLocalStorage = {};
+        const product = {};
+
+        if (localStorage.getItem('cart')){
+            productsFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+        }
+
+        product[props.id] = {
+            ...props
+        }
+
+        localStorage.setItem('cart', JSON.stringify({...productsFromLocalStorage, ...product}));
     }
 
     return (

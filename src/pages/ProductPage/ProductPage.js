@@ -3,7 +3,6 @@ import {BASE_URL} from "../../contstants";
 import Product from "../../components/Product/Product";
 import styles from "./ProductPage.module.css";
 
-
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
 
@@ -11,7 +10,7 @@ const ProductPage = () => {
         const url = BASE_URL + '/products';
 
         fetch(url)
-            .then(responce => responce.json())
+            .then(response => response.json())
             .then(data => setProducts(data))
     }
 
@@ -37,3 +36,6 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+
+// css module
