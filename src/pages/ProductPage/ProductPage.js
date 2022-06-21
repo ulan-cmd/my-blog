@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from "react-router-dom";
 import {BASE_URL} from "../../contstants";
 import Product from "../../components/Product/Product";
 import styles from "./ProductPage.module.css";
@@ -18,6 +19,7 @@ const ProductPage = () => {
 
     return (
         <div className={styles.wrapper}>
+           <Link to="/cart">Корзина</Link>
             {
                 products.map((item) => {
                     return (

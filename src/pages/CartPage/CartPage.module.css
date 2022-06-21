@@ -1,0 +1,93 @@
+.title {
+    width: 100%;
+    left: 0;
+    padding: 3px 65px;
+}
+
+.title p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #0C2340;
+}
+
+.product_table {
+    background-color: #EDE8DC;
+    width: 950px;
+    margin: 70px auto 0;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_img {
+    width: 120px;
+}
+
+.product_table table {
+    border-spacing: 40px 20px;
+}
+
+.buttons {
+    width: 520px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product_table button {
+    background-color: #0C2340;
+    color: white;
+    width: 250px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+table {
+    counter-reset: rowNumber;
+}
+
+table tbody .items {
+    counter-increment: rowNumber;
+}
+
+table tr td {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #0C2340;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+.empty_cart {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_cart p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #0C2340;
+}
+
+.dec, .inc{
+    width: 100% !important;
+}
+
+.countBox{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+}
