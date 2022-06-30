@@ -3,16 +3,24 @@ import {Link} from "react-router-dom";
 import {BASE_URL} from "../../contstants";
 import Product from "../../components/Product/Product";
 import styles from "./ProductPage.module.css";
+import toast from "react-hot-toast";
 
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
 
     const getProducts = () => {
-        const url = BASE_URL + '/products';
+        const url = BASE_URL + '/products1';
 
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (response.status === 200){
+                    return response.json();
+                } else{
+                    throw new Error(response.status);
+                }
+            })
             .then(data => setProducts(data))
+            .catch(err => toast.error(`Ошибка. Статус ошибки: ${err.message}`))
     }
 
     useEffect(getProducts, []);
@@ -21,7 +29,7 @@ const ProductPage = () => {
         <div className={styles.wrapper}>
            <Link to="/cart">Корзина</Link>
             {
-                products.map((item) => {
+                products.length > 0 ? products.map((item) => {
                     return (
                         <Product
                             key={item.id}
@@ -31,7 +39,7 @@ const ProductPage = () => {
                             id={item.id}
                         />
                     )
-                })
+                }) : null
             }
         </div>
     );
